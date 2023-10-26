@@ -17,7 +17,7 @@ describe("Message class", function() {
 
     it('contains a commands array passed into the constructor as the 2nd argument', function () {
         let obj = new Message('test message', ['MODE_CHANGE', 'MOVE', 'STATUS_CHECK'])
-        expect(obj.commands).toStrictEqual(['MODE_CHANGE', 'MOVE', 'STATUS_CHECK'])
+        expect(obj.commands).toBe(['MODE_CHANGE', 'MOVE', 'STATUS_CHECK'])
     });
 
 
