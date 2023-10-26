@@ -20,8 +20,7 @@ describe('Rover class', function () {
     const commands = [new Command('MODE_CHANGE', 'LOW_POWER')];
     const message = new Message('Test message with a command', commands);
     const rover = new Rover(98382);
-    const response = rover.receiveMessage(message);
-    expect(response.message).toBe('Test message with a command');
+    expect(rover.receiveMessage(message).message).toBe('Test message with a command');
   });
 
   it('response returned by receiveMessage includes two results if two commands are sent in the message', function () {
